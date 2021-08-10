@@ -1,0 +1,36 @@
+{
+    "count":4,
+    "todos":[
+        {
+            "id":"61005516f6e0f935d612ebf2",
+            "task":"Do laundry",
+            "student":"Example",
+            "isCompleted":true,
+            "version":0
+        },
+        
+        {
+            "id":"61008fdbf6e0f935d612ebf7",
+            "task":"sleep",
+            "student":"dennis",
+            "isCompleted":true,
+            "version":0
+        },
+
+        {
+            "id":"6100966ef6e0f935d612ebf9",
+            "task":"Escribir un libro",
+            "student":"Nicolas",
+            "isCompleted":true,
+            "version":0
+        },
+
+        {
+            "id":"6100bc0bf6e0f935d612ebff",
+            "task":"Escribir un libro",
+            "student":"Andres Felipe",
+            "isCompleted":false,
+            "version":0
+        }
+        
+        ]}

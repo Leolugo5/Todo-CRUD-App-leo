@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  background-image: linear-gradient(-60deg, #16a084d2 25%, #e6b906dc 100%);
+}
+.CreateTodo {
+  top: 0;
+  position: sticky;
+}
+
+/* MAIN SECTION */
+
+
+.display {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TASK CARD STYLE */
+
+.tasks-to-display {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CardTitle {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}

@@ -1,0 +1,30 @@
+.todoList {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.387);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+    margin: 1.5rem;
+    padding: 1rem 2.5rem;
+  }
+
+.taskCard {
+    background-color: rgba(211, 96, 55, 0.349);
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba( 31, 38, 135, 0.17 );
+}
+.student {
+    background-color: rgba(25, 144, 223, 0.801);
+    margin: 5px;
+    padding: 5px 15px;
+}
+
+.task {
+    background-color: rgb(241, 202, 72);
+    margin: 5px;
+    padding: 5px 15px;
+}

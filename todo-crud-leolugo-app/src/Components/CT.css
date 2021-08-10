@@ -1,0 +1,119 @@
+/* FONTS 
+  font-family: 'Amatic SC', cursive;
+
+  font-family: 'Dancing Script', cursive;
+
+  font-family: 'Hahmlet', serif;
+
+  font-family: 'Kaushan Script', cursive;
+
+  font-family: 'Merienda', cursive;
+
+  font-family: 'Righteous', cursive;
+
+  font-family: 'Source Code Pro', monospace;
+
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+
+  font-family: 'Mulish', sans-serif;
+*/
+
+.CreateTodo {
+  background-image: linear-gradient(to right bottom, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.task-form {
+  width: 80%;
+  background: rgba( 255, 255, 255, 0.50 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 13.0px );
+  -webkit-backdrop-filter: blur( 13.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+}
+
+.title {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+}
+
+.main-form {
+  margin: 10px;
+  padding: .5rem 1rem;
+}
+/* FORM */
+/* NAME AND TASK INPUTS */
+.studentNameCard {
+  font-family: 'Merienda', cursive;
+  display: flex;
+  flex-direction: column;  
+}
+#studentName {
+  margin: 10px 0;
+  padding: 8px 18px;
+  border-style: none;
+  font-family: 'Righteous', cursive;
+  border-radius: 10px;
+}
+
+.taskDescriptionCard {
+  font-family: 'Merienda', cursive;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+#taskDescription {
+  margin: 10px 0;
+  padding: 8px 18px;
+  border-style: none;
+  font-family: 'Righteous', cursive;
+  border-radius: 10px;
+}
+  
+  
+/* SUBMIT BUTTON */
+.submitButton {
+border-style: none;
+margin: 2rem 0 1rem 0;
+padding: .8rem 2rem;
+border-radius: 10px;
+cursor: pointer;
+background-color: white;
+box-shadow: 0px 10px 33px -10px rgba(0,0,0,0.86);
+-webkit-box-shadow: 0px 10px 33px -10px rgba(0,0,0,0.86);
+-moz-box-shadow: 0px 10px 33px -10px rgba(0,0,0,0.86);
+}
+.submitButton:hover {
+    background-color: whitesmoke;
+}
+.submitButton:active {
+    transform: translateY(1px);
+}
+
+  /* Filters */
+  .filter {
+    background: rgba( 255, 255, 255, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.0px );
+    -webkit-backdrop-filter: blur( 13.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 1rem;
+    padding: 1rem;
+  }
