@@ -13,7 +13,7 @@
 .taskCard {
     background-color: rgba(211, 97, 55, 0.5);
     padding: 1rem 1.5rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px 0 rgba( 31, 38, 135, 0.17 );
 }

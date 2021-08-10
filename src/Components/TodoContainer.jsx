@@ -12,7 +12,6 @@ function TodoContainer ({addTodo}) {
             const response = await fetch(link);
             const data = await response.json();
             setTaskData(data.todos)
-            console.log("Esta es la info", data.todos )
         }
         request();
         

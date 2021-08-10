@@ -17,13 +17,37 @@ function CreateTodo(props) {
     const handleSubmit = e => {
         e.preventDefault();
 
+        const cardID = Math.floor(Math.random() * 100000);
+
         props.onSubmit({
-            id: Math.floor(Math.random() * 100000), 
+            id: cardID, 
             task: task,
             student: name,
             isCompleted: false,
             version: 0
         })
+        postDataTodo()
+        async function postDataTodo() {
+            try {
+                let todoItemData = await fetch('https://todos-go.herokuapp.com/api/todos', {
+                    method: 'PUT',
+                    mode: 'no-cors',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringifY({
+                        id: cardID,
+                        task: task,
+                        student: name,
+                        isCompleted: false,
+                    })
+                });
+                console.log('Result = ', todoItemData)
+            }   catch {
+
+            }
+        }
         setName("");
         setTask("");
     }
@@ -35,9 +59,9 @@ function CreateTodo(props) {
         <div className="task-form">
             <div className="title">Add a new task</div>
             <form onSubmit={ handleSubmit } className="main-form">
-                <label className="studentNameCard"> Name <input type="text" name="Nombre" id="studentName" placeholder="Student Name" onChange={handleName} /> </label>
-                <label className="taskDescriptionCard"> Task <input type="text" name="taskDescription" id="taskDescription" placeholder="Task Description" onChange={handleTask} /> </label>
-                <button className="submitButton" type="submit" onClick={handleSubmit}> <span> Submit </span> </button>
+                <label className="studentNameCard"> Name <input type="text" name="Nombre" id="studentName" placeholder="Student Name" onChange={handleName} value={name} /> </label>
+                <label className="taskDescriptionCard"> Task <input type="text" name="taskDescription" id="taskDescription" placeholder="Task Description" onChange={handleTask} value={task} /> </label>
+                <button className="submitButton" type="submit" onSubmit={ handleSubmit }> <span> Submit </span> </button>
             </form>
         </div>
 
