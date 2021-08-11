@@ -23,7 +23,7 @@ function App() {
         <div className="tasks-to-display">
 
           
-          <TodoContainer addTodo={addTodo} />
+          <TodoContainer todos={todos}/>
          
         </div>
       

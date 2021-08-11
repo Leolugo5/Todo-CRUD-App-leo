@@ -1,6 +1,6 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import './CT.css'
-
 
 function CreateTodo(props) {
     const [name, setName] = useState("");
@@ -26,28 +26,24 @@ function CreateTodo(props) {
             isCompleted: false,
             version: 0
         })
-        postDataTodo()
-        async function postDataTodo() {
-            try {
-                let todoItemData = await fetch('https://todos-go.herokuapp.com/api/todos', {
-                    method: 'PUT',
-                    mode: 'no-cors',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringifY({
-                        id: cardID,
-                        task: task,
-                        student: name,
-                        isCompleted: false,
-                    })
-                });
-                console.log('Result = ', todoItemData)
-            }   catch {
 
-            }
+        const todoItemData = async () => {
+            const dataRequest = await axios({
+                method: 'post',
+                url: 'https://todos-go.herokuapp.com/api/todos',
+                data: {
+                    id: cardID, 
+                    task: task,
+                    student: name,
+                    isCompleted: false,
+                    version: 0
+                }
+            })
+            console.log(dataRequest) 
         }
+
+        todoItemData()       
+        
         setName("");
         setTask("");
     }

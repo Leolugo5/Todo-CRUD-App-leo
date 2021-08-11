@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './TodoContainerStyle.css';
 
 
-function TodoContainer ({addTodo}) {
+function TodoContainer ({todos}) {
 
     const [taskData, setTaskData] = useState([])
     
@@ -18,18 +18,34 @@ function TodoContainer ({addTodo}) {
     }, [])
 
     return(
-        <div className="todoList"> {taskData.map(post => (
-            <div className="taskCard" key={post.id}>
-                <div className="student">
-                    {post.student}
+        <div className="todoList"> 
+            {
+                todos.map(post => (
+                    <div className="taskCard" key={post.id}>
+                    <div className="student">
+                        {post.student}
+                    </div>
+                    <div className="task">
+                        {post.task}
+                    </div>
+                    <div className="isCompleted">
+                        --Comp
+                    </div>
                 </div>
-                <div className="task">
-                    {post.task}
+                ))
+            }
+            {taskData.map(post => (
+                <div className="taskCard" key={post.id}>
+                    <div className="student">
+                        {post.student}
+                    </div>
+                    <div className="task">
+                        {post.task}
+                    </div>
+                    <div className="isCompleted">
+                        --Comp
+                    </div>
                 </div>
-                <div className="isCompleted">
-                    --Comp
-                </div>
-            </div>
         ))} </div>
     )
 }
