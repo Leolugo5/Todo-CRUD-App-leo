@@ -12,12 +12,20 @@ function App() {
     const newTodos = [todo, ...todos]
 
     setTodos(newTodos)
-    console.log(todo, ...todos)
   }
+
+  /* const updateList =  fetch("https://todos-go.herokuapp.com/api/todos", {
+    method: 'GET',
+    headers: {
+      "Content-Type":"application/json"
+      },
+    body: raw,
+    redirect: 'follow'
+  }) */
 
   return (
     <div className="App">
-      <CreateTodo onSubmit={addTodo}/>
+      <CreateTodo onSubmit={addTodo} />
       <div className="display">
 
         <div className="tasks-to-display">

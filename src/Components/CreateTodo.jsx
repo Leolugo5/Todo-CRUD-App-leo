@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import './CT.css'
 
@@ -17,37 +16,28 @@ function CreateTodo(props) {
     const handleSubmit = e => {
         e.preventDefault();
 
-        const cardID = Math.floor(Math.random() * 100000);
-
         props.onSubmit({
-            id: cardID, 
             task: task,
             student: name,
             isCompleted: false,
             version: 0
         })
 
-        const todoItemData = async () => {
-            const dataRequest = await axios({
-                method: 'post',
-                url: 'https://todos-go.herokuapp.com/api/todos',
-                data: {
-                    id: cardID, 
-                    task: task,
-                    student: name,
-                    isCompleted: false,
-                    version: 0
-                }
-            })
-            console.log(dataRequest) 
-        }
-
-        todoItemData()       
+        fetch("https://todos-go.herokuapp.com/api/todos", {
+            method: 'POST',
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({
+                "student": name,
+                "task": task
+            }),
+            redirect: 'follow'
+        });  
         
         setName("");
         setTask("");
     }
 
+    
 
     return <div className="CreateTodo">
         <h2>Task Management</h2>
