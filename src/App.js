@@ -7,6 +7,7 @@ import { useState } from 'react';
 function App() {
 
   const [todos, setTodos] = useState([])
+  const todoListReloader = false;
   
   const addTodo = todo => {
     const newTodos = [todo, ...todos]
@@ -31,7 +32,7 @@ function App() {
         <div className="tasks-to-display">
 
           
-          <TodoContainer todos={todos}/>
+          <TodoContainer todos={todos} todoListReloader={todoListReloader} />
          
         </div>
       
